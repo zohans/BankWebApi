@@ -1,0 +1,142 @@
+{
+	"id": "af2519d1-f66b-bc27-7adc-c8c241c18eaa",
+	"name": "BankAccountTest",
+	"description": "",
+	"order": [
+		"d83a76a3-dc80-a5b9-1934-211e29b32de8",
+		"db044094-909b-a742-ee30-a1e075619673",
+		"408fa05b-e6a5-ba47-05de-80a690f05676",
+		"ec82a145-c355-0c6e-a9f4-ccdd3c993d09"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1625381653561,
+	"owner": "148330",
+	"public": false,
+	"requests": [
+		{
+			"id": "408fa05b-e6a5-ba47-05de-80a690f05676",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://localhost:44369/api/bankaccount/withdraw",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1625394116623,
+			"name": "WithdrawBankAccount",
+			"description": "",
+			"collectionId": "af2519d1-f66b-bc27-7adc-c8c241c18eaa",
+			"responses": [],
+			"rawModeData": "{\r\n    \"UserId\": 1,\r\n    \"AccountName\": \"abc1\",\r\n    \"TransactionType\": \"Withdraw\",\r\n    \"Amount\": 11\r\n}"
+		},
+		{
+			"id": "d83a76a3-dc80-a5b9-1934-211e29b32de8",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://localhost:44369/bankaccount/deposit",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1625393837130,
+			"name": "GetUserBankAccounts",
+			"description": "",
+			"collectionId": "af2519d1-f66b-bc27-7adc-c8c241c18eaa",
+			"responses": [],
+			"rawModeData": "{\r\n    \"UserId\": 1,\r\n    \"AccountName\": \"abc1\",\r\n    \"TransactionType\": \"Deposit\",\r\n    \"Amount\": 10\r\n}"
+		},
+		{
+			"id": "db044094-909b-a742-ee30-a1e075619673",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://localhost:44369/api/bankaccount/deposit",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1625394120448,
+			"name": "DepositBankAccount",
+			"description": "",
+			"collectionId": "af2519d1-f66b-bc27-7adc-c8c241c18eaa",
+			"responses": [],
+			"rawModeData": "{\r\n    \"UserId\": 1,\r\n    \"AccountName\": \"abc1\",\r\n    \"TransactionType\": \"Deposit\",\r\n    \"Amount\": 10\r\n}"
+		},
+		{
+			"id": "ec82a145-c355-0c6e-a9f4-ccdd3c993d09",
+			"headers": "Content-Type: application/json\nUserName: Admin\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "UserName",
+					"value": "Admin",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://localhost:44369/api/user/create",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1625448907503,
+			"name": "UserCreate",
+			"description": "",
+			"collectionId": "af2519d1-f66b-bc27-7adc-c8c241c18eaa",
+			"responses": [],
+			"rawModeData": "{\r\n    \"UserName\": \"MarkU\",\r\n    \"FirstName\": \"Mark\",\r\n    \"LastName\": \"Utting\"\r\n}"
+		}
+	]
+}
