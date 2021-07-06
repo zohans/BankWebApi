@@ -4,12 +4,13 @@ using Microsoft.AspNetCore.Http;
 using System.Net;
 using BankWebApplication.Models;
 using System;
+using BankWebApplication.Interfaces;
 
 namespace BankWebApplication.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
-        public static void ConfigureExceptionHandler(this IApplicationBuilder app)
+        public static void ConfigureExceptionHandler(this IApplicationBuilder app, ILoggerManager logger)
         {
             app.UseExceptionHandler(appError =>
             {
@@ -19,9 +20,8 @@ namespace BankWebApplication.Extensions
                     context.Response.ContentType = "application/json";
                     var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                     if (contextFeature != null)
-                    {
-                        //TODO : logging
-                        //logger.LogError($"Something went wrong: {contextFeature.Error}");
+                    {                        
+                        logger.LogError($"Bank web api unhandled error : {contextFeature.Error}");
                         await context.Response.WriteAsync(new Error()
                         {
                             StatusCode = context.Response.StatusCode,
