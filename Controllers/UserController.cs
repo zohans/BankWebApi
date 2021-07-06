@@ -21,10 +21,10 @@ namespace BankWebApplication.Controllers
         {
             _bankContext = BankContext;
         }
-        
 
+        [HttpPost]
         [Route("create")]
-        public User CreateUser([FromBody]UserRequest userRequest)
+        public async Task<User> CreateUser([FromBody]UserRequest userRequest)
         {
 
             string userName = string.Empty;
@@ -44,18 +44,16 @@ namespace BankWebApplication.Controllers
                     CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now };
                 
                 _bankContext.Add(userAdded);
-                _bankContext.SaveChanges();
+                await _bankContext.SaveChangesAsync();
             }                
 
             return userAdded;
         }
 
         [HttpGet]
-        public IEnumerable<User> Get()
-        {
-            var data = new List<User>();
-
-            return data;
+        public string Get()
+        {            
+            return "Welcome to Bank Web Api";
         }
     }
 }

@@ -11,5 +11,12 @@ Running application steps:
 3. Bank Account Db be created.
 4. Import Postman package can be used for testing.
 
+
+Api lists:
+1. Create user :           /api/user/create
+2. Get user bank account : /api/bankaccount
+3. Deposit :               /api/bankaccount/deposit
+4. Withdraw :              /api/bankaccount/withdraw
+
 Enjoy!
 
